@@ -1,0 +1,58 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`card-scrum-planning`
+Card for scrum planning
+
+@demo demo/index.html 
+-->
+
+<dom-module id="card-scrum-planning">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background-color: orange;
+        text-align: center;
+        font-size: 10rem;
+        color: white;
+      }
+    </style>
+    <h2 id="number">[[number]]</h2>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'card-scrum-planning',
+
+      properties: {
+        number: {
+            type: String
+        },
+        infinite: {
+            type: Boolean
+        },
+        coffee: {
+            type:Boolean
+        },
+        answer: {
+            
+        }
+      },
+    created: function() {
+        console.log('El elemento se creó.')
+        console.log(this)
+    },
+    ready: function() {
+        console.log('El elemento está accesible')
+        console.log(this.$);
+    },
+    attached: function() {
+        console.log('El elemento ya está en el documento')        
+    }
+
+    });
+  </script>
+</dom-module>
